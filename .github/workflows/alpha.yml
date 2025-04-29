@@ -293,7 +293,7 @@ jobs:
         if: failure()
         uses: actions/upload-artifact@v4
         with:
-          name: Clash-Verge-Installer
+          name: Clash-Verge-${{ matrix.target }}
           path: src-tauri\target\${{ matrix.target }}\release
 
   alpha-for-linux-arm:
