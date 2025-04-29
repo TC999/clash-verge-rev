@@ -289,6 +289,13 @@ jobs:
           tauriScript: pnpm
           args: --target ${{ matrix.target }}
 
+      - name: Upload built installer
+        if: failure()
+        uses: actions/upload-artifact@v3
+        with:
+          name: Clash-Verge-Installer
+          path: src-tauri\target\${{ matrix.target }}\release
+
   alpha-for-linux-arm:
     needs: update_tag
     strategy:
