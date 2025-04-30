@@ -294,7 +294,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: Clash-Verge-${{ matrix.target }}
-          path: src-tauri\target\${{ matrix.target }}\release
+          path: src-tauri/target/${{ matrix.target }}/release
 
   alpha-for-linux-arm:
     needs: update_tag
